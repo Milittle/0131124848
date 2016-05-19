@@ -1,0 +1,53 @@
+
+// 0131124848Dlg.h : 头文件
+//
+
+#pragma once
+#include "afxwin.h"
+
+
+// CMy0131124848Dlg 对话框
+class CMy0131124848Dlg : public CDialogEx
+{
+// 构造
+public:
+	CMy0131124848Dlg(CWnd* pParent = NULL);	// 标准构造函数
+
+// 对话框数据
+	enum { IDD = IDD_MY0131124848_DIALOG };
+
+	protected:
+	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
+	void OnPlay();
+	DWORD getinfo(DWORD);
+	void OnStop();
+
+
+// 实现
+protected:
+	HICON m_hIcon;
+
+	// 生成的消息映射函数
+	virtual BOOL OnInitDialog();
+	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
+	afx_msg void OnPaint();
+	afx_msg HCURSOR OnQueryDragIcon();
+	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedCancel();
+	CString ShowTime;
+//	CEdit WriteIn;
+	afx_msg void OnBnClickedButton2bt();
+//	CString ExamNumber;
+//	CString IDNumber;
+	CString WriteIn;
+	afx_msg void OnBnClickedOk();
+	CComboBox ComboBox;
+	CEdit writein;
+	CString IDNumber;
+	CString ExamNumber;
+	CEdit idnumber;
+	CEdit examnumber;
+	CString choose;
+	CString aa;
+};
